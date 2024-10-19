@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    cursor: none; /* Hide the default cursor */
+}
+
+.snake-segment {
+    position: absolute;
+    width: 15px;   /* Smaller size for a snake-like appearance */
+    height: 15px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, red, yellow, green, cyan, blue, violet);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.8);
+    filter: brightness(1.5);
+    animation: neon-glow 3s infinite alternate;
+}
+
+@keyframes neon-glow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
